@@ -1,0 +1,86 @@
+{
+  "name": "andiamo",
+  "description": "Fomantic-Ui Based Admin Template",
+  "main": "gulpfile.js",
+  "authors": [
+    "partitect"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "gulp",
+    "pug",
+    "sass",
+    "scss",
+    "babel",
+    "es6",
+    "ecmascript6",
+    "es6-javascript",
+    "preprocessor",
+    "admin",
+    "admin-template",
+    "semantic-ui",
+    "fomantic-ui",
+    "optimize",
+    "minify",
+    "theme",
+    "theme-development",
+    "theme",
+    "templatemonster"
+  ],
+  "homepage": "https://github.com/partitect/andiamo",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fomantic-ui": "^2.8.6",
+    "jquery": "^3.4.1",
+    "echarts": "^4.9.0",
+    "jquery-slimscroll": "slimScroll#^1.3.8",
+    "color-thief": "^2.3.0",
+	"echarts-liquidfill": "https://github.com/ecomfe/echarts-liquidfill.git#^2.0.6"
+
+  },
+  "overrides": {
+    "jquery": {
+      "main": [
+        "./dist/jquery.min.js"
+      ]
+	},
+    "fomantic-ui": {
+      "main": [
+        "./dist/components/*.min.*",
+        "./dist/themes/default/assets/fonts/*",
+        "./dist/themes/default/assets/images/*",
+        "./dist/semantic.min.js",
+        "./dist/semantic.min.css"
+      ]
+    },
+    "echarts": {
+      "main": [
+        "./dist/echarts-en.min.js",
+        "./map/js/world.js",
+        "./map/js/usa.js"
+      ]
+    },
+    "echarts-liquidfill": {
+      "main": [
+        "./dist/echarts-liquidfill.min.js"
+      ]
+    },
+    "jquery-slimscroll": {
+      "main": [
+        "./jquery.slimscroll.min.js"
+      ]
+    },
+    "color-thief": {
+      "main": [
+        "dist/*.*"
+      ]
+    }
+  }
+}
