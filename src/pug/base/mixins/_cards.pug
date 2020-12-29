@@ -35,17 +35,17 @@ mixin cryptoSegment(title,desc,icon,value,trendvalue,chartid,colorclass,arrowico
 			.ui.grid
 				.ten.wide.column
 					h6.ui.header
-						img.ui.fluid.image(src="./assets/img/crypto-icons/svg/"+icon+".svg",alt="andiamo-images")
+						img.ui.fluid.image(src="./assets/img/crypto-icons/svg/"+icon+".svg",alt="shoeman-images")
 						.content
 							| #{desc}
 							.sub.header=title
 				.six.wide.column.right.aligned.crypto-bg
 					h6.ui.header
-						img.ui.fluid.image(src="./assets/img/svg/"+arrowicon+"-arrow.svg",alt="andiamo-images")
+						img.ui.fluid.image(src="./assets/img/svg/"+arrowicon+"-arrow.svg",alt="shoeman-images")
 						.content
 							| $#{value}
 							.sub.header='%' + trendvalue
-		.andiamo-charts(id="crypto-chart-"+chartid+"",style="width:100%;height:100px")
+		.shoeman-charts(id="crypto-chart-"+chartid+"",style="width:100%;height:100px")
 mixin analysticSegment(title,value,desc,icon,colorclass,index,...style)
 	.ui.segment.__analystic-segment
 		.segment-body
@@ -63,7 +63,7 @@ mixin analysticSegment(title,value,desc,icon,colorclass,index,...style)
 		.segment-footer
 			.ui.grid
 				.sixteen.wide.column
-					.andiamo-charts(id="analystic-chart-"+(index+1)+"",style="width:100%;height:50px")
+					.shoeman-charts(id="analystic-chart-"+(index+1)+"",style="width:100%;height:50px")
 mixin restaurantSegment(title,value,desc,icon,colorclass,index,...style)
 	.ui.segment.__restaurant-segment
 		.segment-body
@@ -77,11 +77,11 @@ mixin restaurantSegment(title,value,desc,icon,colorclass,index,...style)
 							| #{title}
 				.six.wide.column
 					.restaurant-charts-wrapper
-						.andiamo-charts(id="restaurant-chart-"+(index+1)+"",style="width:100%;height:50px")
+						.shoeman-charts(id="restaurant-chart-"+(index+1)+"",style="width:100%;height:50px")
 mixin fitnessSegment(title,index,height=""...style)
 	.ui.segment.__fitness-segment
 		h5.ui.header.center.aligned=title
-		.andiamo-charts(id="fitness-chart-"+(index+1)+"",style="width:100%;height:"+height+"")
+		.shoeman-charts(id="fitness-chart-"+(index+1)+"",style="width:100%;height:"+height+"")
 mixin colorBoxSegment(cls,title,hex,rgb)
 	.ui.segment.__color-box-segment
 		.color-container
@@ -119,7 +119,7 @@ mixin todo-list()
 mixin event-list()
 	each value, index in eventList
 		.ui.segment.__event-list-segment(class="__"+value.cls+"")
-			img(src="./assets/img/svg/"+value.img+".svg",alt="andiamo-images")
+			img(src="./assets/img/svg/"+value.img+".svg",alt="shoeman-images")
 			p=value.title
 - var paymentCardList = [{title:"Manon Betts",desc:"Administrator",img:"48",hours:"347 mins"},{title:"Mallory Mccray",desc:"Supporter",img:"49",hours:"287 mins"},{title:"Alton Lynn",desc:"Co-Operator",img:"50",hours:"109 mins"},{title:"Kornelia Hull",desc:"Manager",img:"51",hours:"88 mins"}]
 mixin payment-card()
@@ -133,6 +133,6 @@ mixin payment-card()
 					h4=value.hours
 			.graph-wrapper
 				.left
-					img(src="./assets/img/avatar/"+value.img+".png",alt="andiamo-images")
+					img(src="./assets/img/avatar/"+value.img+".png",alt="shoeman-images")
 				.right
-					.andiamo-charts(id="account-chart-"+(index+1)+"",style="width:100%;height:100px")
+					.shoeman-charts(id="account-chart-"+(index+1)+"",style="width:100%;height:100px")

@@ -1,5 +1,5 @@
 {
-  "name": "andiamo",
+  "name": "soeman",
   "description": "Fomantic-Ui Based Admin Template",
   "main": "gulpfile.js",
   "authors": [
@@ -27,7 +27,7 @@
     "theme",
     "templatemonster"
   ],
-  "homepage": "https://github.com/partitect/andiamo",
+  "homepage": "https://github.com/partitect/shoeman",
   "private": true,
   "ignore": [
     "**/.*",
