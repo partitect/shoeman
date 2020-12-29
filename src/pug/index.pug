@@ -4,8 +4,35 @@ block pageVars
 	- var menuCrumb = "Home";
 	- var pageTitle = "Shoeman";
 block PageContent
-	include data/demos-data
 	.page-wrapper
-
+		.ui.grid.stackable
+			.five.wide.column
+				.ui.basic.segment.slogan-segment
+					h1 JUST
+					h1 DO
+					h1 IT
+					p With all of the biggest names in fashion, you will be amazed to find the best designer shoes
+			.eight.wide.column
+				.ui.basic.segment.shoe-segment
+					img(src="./assets/img/shoes/Air-Huarache-Gripp-QS.svg")
+			.three.wide.column
+				.ui.basic.segment.info-segment
+					h1 AIR JORDAN 14 RETRO
+		.ui.grid.stackable
+			.sixteen.wide.column
+				#forcecentered
+					.shoe-list
+						each cardList,index in [{id:"1",title:"Aj",star:5,price:"285",colors:"3 Colors",src:"aj"},{id:"1",title:"Air Jordan Retro",star:5,price:"285",colors:"3 Colors",src:"AIR-JORDAN-14-RETRO"},{id:"1",title:"Aj",star:5,price:"285",colors:"3 Colors",src:"Nike-Shox-R4-OG"},{id:"1",title:"Aj",star:5,price:"285",colors:"3 Colors",src:"Nike-Zoom-2K"},{id:"1",title:"Aj",star:5,price:"285",colors:"3 Colors",src:"aj"}]
+							.ui.segment.__shoe-segment
+								.ui.fluid.image
+									img(src="./assets/img/shoes/"+cardList.src+".svg")
+								.infos
+									h3=cardList.title
+									.ui.rating(data-icon='star' data-rating='2')
+									span.price $#{cardList.price}
+									span.colors=cardList.colors
+					a.andi-btn.icon.circle.filled.primary.nextbtn(href='#')
+						img(src="./assets/img/transfer.svg")
 block extraScripts
-
+	+vendorscript("jquery.easing",'jquery.easing/js',true)
+	+vendorscript("sly",'sly/dist',true)

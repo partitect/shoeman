@@ -1,30 +1,127 @@
 .ui.segment {
-	&.demos-segment {
-		box-shadow: none;
-		border: 0;
-		position: relative;
+    &.slogan-segment {
+		padding: 0;
+        h1 {
+            font-size: 4rem;
+            font-family: 'Viga', sans-serif!important;
+			margin:0;
+			color:#fff!important;
+        }
+		p{
+			color:#fff;
+		}
+    }
+	&.shoe-segment{
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		width: 100%;
-		min-height: 250px;
-		.ui.button{
-			position: absolute;
-			bottom:10px;
-			left:10px;
-			width: 94%;
+		height: 100%;
+		img{
+			width: 100%;
+			height: 100%;
+			margin-top: -100px;
+			margin-left: -200px;
+			transform: rotate(-30deg) scale(1.8);
 		}
 	}
-	&.pre-segment{
-		h4{
-			text-align: center;
+	&.info-segment{
+		h1{
+			font-family: 'Viga', sans-serif!important;
+			margin:0;
+			color:#FFB744!important;
 			font-size: 2rem;
+		}
+	}
 
-		}
-		p{
-			text-align: center;
-		}
-		svg.icon{
-			width:70px;
-			height: 70px;
-			margin: 20px auto;
+}
+// EVENT DASHBOARD
+.nextbtn {
+	position: absolute;
+	top: 50%;
+	right: 5%;
+	transform: translateY(-50%);
+
+	background: rgba(0,0,0,0.8);
+  backdrop-filter: saturate(180%) blur(1px);
+  padding: 10px;
+  border-radius: 5px;
+	img {
+		width:50px;
+		height: 30px;
+	}
+}
+
+#forcecentered {
+	position: relative;
+	.shoe-list {
+		display: inline-block;
+		cursor: move;
+
+		.ui.segment {
+			&.__shoe-segment {
+				float: left;
+				width: 300px;
+				height: 120px;
+				margin: 20px;
+				border-radius: 5px;
+				padding: 10px;
+				position: relative;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				.infos{
+					display: flex;
+					flex-direction: column;
+					justify-content: flex-start;
+					h3{
+						font-size: .75em;
+						font-family: 'Varela', sans-serif!important;
+						text-transform: uppercase;
+						margin-bottom: 10px;
+
+
+					}
+					.rating{
+						margin-left: -3px;
+						margin-bottom: 10px;
+					}
+					span{
+						font-family: 'Varela', sans-serif!important;
+						&.colors{
+							color:rgba(0, 0, 0, 0.3);
+							margin-top: 10px;
+						}
+					}
+				}
+
+				.image{
+
+					margin-left: -100px;
+					z-index: 999;
+					width: 220px;
+					height: 100%;
+				img{
+
+					width: 100%;
+					height: 100%;
+					transform: rotate(-30deg) scale(1.7);
+
+				}}
+				&.active {
+					background: -webkit-linear-gradient(45deg, #1a3465, #122958);
+					background: -o-linear-gradient(45deg, #1a3465, #122958);
+					background: -moz-linear-gradient(45deg, #1a3465, #122958);
+					background: linear-gradient(45deg, #1a3465, #122958);
+					box-shadow: 0 12px 20px -10px #122958, 0 4px 20px 0 rgba(0, 0, 0, 0.12),
+						0 7px 8px -5px #1a3465;
+					color: #fff;
+
+				}
+
+
+
+			}
 		}
 	}
 }
